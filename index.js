@@ -9,16 +9,10 @@ set.add("159")
 set.add("357")
 let turn = "X",playerX = [], playerO = [];
 document.getElementById("turns").innerText = `Player ${turn} turn`;
-function disableOnclick() {
-    for (let i = 1; i <= 9; i++) {
-        document.getElementById(`tile${i}`).onclick = false;
-    }
-}
 function checkWinner(str) {
     if (str.length === 3) {
         if (set.has(str)) {
             document.getElementById("resultHolder").innerText = `The winner is ${turn}`
-            disableOnclick();
         }
     }
     else if (str.length > 3 && str.length < 5) {
@@ -31,7 +25,6 @@ function checkWinner(str) {
         for (let i = 0; i < combinations.length; i++) {
             if (set.has(combinations[i])) {
                 document.getElementById("resultHolder").innerText = `The winner is ${turn}`
-                // disableOnclick();
             }
         }
     }
@@ -47,11 +40,9 @@ function checkWinner(str) {
         for (let i = 0; i < combinations.length; i++) {
             if (set.has(combinations[i])) {
                 document.getElementById("resultHolder").innerText = `The winner is ${turn}`
-                // disableOnclick();
             }
         }
         document.getElementById("resultHolder").innerText = `The Game is Drawn`
-        disableOnclick();
     }
 }
 
