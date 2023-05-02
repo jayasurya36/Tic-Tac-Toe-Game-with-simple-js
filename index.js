@@ -31,7 +31,7 @@ function checkWinner(str) {
         for (let i = 0; i < combinations.length; i++) {
             if (set.has(combinations[i])) {
                 document.getElementById("resultHolder").innerText = `The winner is ${turn}`
-                disableOnclick();
+                // disableOnclick();
             }
         }
     }
@@ -47,7 +47,7 @@ function checkWinner(str) {
         for (let i = 0; i < combinations.length; i++) {
             if (set.has(combinations[i])) {
                 document.getElementById("resultHolder").innerText = `The winner is ${turn}`
-                disableOnclick();
+                // disableOnclick();
             }
         }
         document.getElementById("resultHolder").innerText = `The Game is Drawn`
@@ -73,11 +73,12 @@ function setInnertext(val) {
 
 function reset() {
     for (let i = 1; i <= 9; i++) {
-        document.getElementById(`tile${i}`).innerText = "";
+        document.getElementById(`tile${i}`).innerText = ''
         document.getElementById(`tile${i}`).onclick = true;
     }
     playerO = [];
     playerX = [];
-    turn = "X";     
+    turn = "X";  
+    document.getElementById("turns").innerText = `Player ${turn} turn`; 
     document.getElementById("resultHolder").innerText = ''
 }
