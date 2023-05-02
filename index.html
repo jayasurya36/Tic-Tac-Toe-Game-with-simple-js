@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="titleholder">
+      <h1>Tic Tac Toe</h1>
+    </div>
+    <div id="gameHolder">
+        <span id="resultHolder"></span>
+        <div class="tiles">
+            <div class="innertiles" id="tile1" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile2" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile3" onclick=setInnertext(this)></div>
+        </div>
+        <div class="tiles">
+            <div class="innertiles" id="tile4" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile5" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile6" onclick=setInnertext(this)></div>
+        </div>
+        <div class="tiles">
+            <div class="innertiles" id="tile7" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile8" onclick=setInnertext(this)></div>
+            <div class="innertiles" id="tile9" onclick=setInnertext(this)></div>
+        </div>
+    </div>
+    <div class="restart">
+        <span style="display: block;" id="turns">Player x turn</span>
+        <button id="reset-btn" onclick="reset()">
+            Restart
+        </button>
+    </div>
+    <script src="./index.js" ></script>
+  </body>
+</html>
